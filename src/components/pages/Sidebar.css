@@ -1,0 +1,45 @@
+.sidebar {
+    background-color: #090139;
+    width: 280px; /* Default width for larger screens */
+    color: #e5e5e5;
+    border-right: 2px solid #173f1f;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* User section styling */
+.user-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #173f1f;
+}
+
+/* Logout button styling */
+.logout-button {
+    background-color: #8b0000;
+    color: #fff;
+    width: 80%;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.logout-button:hover {
+    background-color: #a52a2a;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%; /* Full width on small screens */
+        transform: translateX(-100%); /* Initially hidden */
+        position: absolute; /* Position to overlay other content */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+    
+    /* Active class to show sidebar when toggled */
+    .sidebar.open {
+        transform: translateX(0); /* Show the sidebar */
+    }
+}
